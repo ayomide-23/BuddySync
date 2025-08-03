@@ -1,185 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms of Service - BuddySync</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuddySync</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <script src="https://unpkg.com/heroicons@2.0.13/dist/heroicons.min.js"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
-            },
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
           },
+          colors:{
+            // brandBlue: '#1E88E5',
+            brandLightBlue: '#03A9F4',
+          }
         },
-      };
-    </script>
-    <style>
-      body {
-        font-family: Georgia, Cambria, "Times New Roman", serif;
+      },
+    };
+  </script>
+  <style>
+    @keyframes typing{
+      from {
+        width: 0;
       }
-    </style>
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 bg-transparent">
-      <div class="px-10 py-1">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex items-center gap-2">
-            <h1 class="text-2xl tracking-[-0.03em] font-charter font-bold">BuddySync</h1>
-          </div>
-        <!-- <a target="_blank" class="ml-auto px-5 py-2 rounded-full bg-[#09090B] text-[#FAFAFA] transition-colors text-sm font-medium" href="/">Get the App</a> -->
+      to{
+        width: 9ch;
+      }
+    }
+    @keyframes blink{
+      0%, 100% {
+        border-color: transparent;
+      }
+      50% {
+        border-color: black;
+      }
+    }
+    .animate-typing{
+      animation: 
+        typing 2s steps(9) forwards,
+        blink 1s step-end infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 4px solid black;
+        display: inline-block;
+        width: 0; 
+     }
+    @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: scrollLeft 30s linear infinite;
+  }
+</style>
+</head>
+<body class="bg-[#FFFFFF] font-serif">
+  <!-- header -->
+   <header class="py-6 shadow-sm">
+      <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 bg-transparent">
+         <div class="px-10 py-1">
+             <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                  <img src="/logo/logo.jpg" class="h-8 w-8 rounded-full" alt="BuddySync Logo">
+                  <h1 class="text-2xl tracking-[-0.03em] font-charter font-bold">BuddySync</h1>
+                </div>
+                <!-- <a target="_blank" class="ml-auto px-5 py-2 rounded-full bg-brandLightBlue text-[#FAFAFA] transition-colors text-sm font-medium" href="/">Get the App</a> -->
+             </div>
+        </div>
+  </nav>
+</header>
+<!-- hero section -->
+ <section>
+    <div class="container mx-auto px-4 py-20 text-center">
+      <div class="text-5xl font-bold mb-4">
+        <span>
+          Welcome to <span class="text-brandLightBlue animate-typing align-middle">BuddySync</span>
+        </span>
+      </div>
+      <p class="text-sm text-gray-600 md:text-xl  mb-8">
+        Find your perfect study match and stay productive with real-time collaboration, Pomodoro timers, and instant chat — all in one app.
+      </p>
+    </div>
+  </section>
+
+<section class="bg-[#FAFAFA] min-h-screen flex items-center justify-center px-4">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-12 w-full max-w-6xl">
+    <div class="max-w-xl text-center md:text-left">
+      <h1 class="text-[2.8rem] md:text-[3.5rem] font-bold leading-tight">
+        Sync <span class="italic font-semibold text-brandLightBlue">smarter, </span>Learn better.
+      </h1>
+      <p class="mt-6 text-lg text-gray-700">
+        Find your perfect study match instantly and supercharge your productivity. BuddySync pairs you with motivated learners worldwide so you can stay focused, accountable, and crush your study goals.
+      </p>
+      <div class="flex gap-4 mt-8 justify-center md:justify-start">
+        <!-- <a href="/" target="_blank">
+          <img src="/logo/applestore.svg" alt="App Store" class="w-full max-w-[200px]" />
+        </a> -->
+        <!-- <a href="/" target="_blank">
+          <img src="/logo/playsotre.svg" alt="Play Store" class="w-full max-w-[200px]" />
+        </a> -->
       </div>
     </div>
-  </nav>
-  <!-- main body -->
-  <main class="min-h-screen bg-[#FAFAFA] text-[#09090B] flex flex-col">
-    <div class="container mx-auto px-4 flex flex-col flex-grow">
-      <div class="max-w-4xl mx-auto pb-16 pt-32 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-charter font-bold mb-7">
-          BuddySync Terms of Service
-        </h1>
-        <p class="text-lg mb-8">
-          Welcome to <strong>BuddySync</strong> These Terms of Service (“Terms”) govern your use of the BuddySync mobile application, website, and related services (collectively, the “Services”) operated by BuddySync Learning Network Inc (“we,” “us,” or “our”).
-        </p>
-        <p class="text-lg mb-12">
-          By accessing or using the Services, you agree to these Terms. If you do not agree, please refrain from using the Services.
-        </p>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">1. Account Registration</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-             <p class="text-gray-600">To use BuddySync, you must create an account via email/password or Google/Apple Sign-In. You agree to:</p>
-                <ul class="list-disc list-inside mb-6 text-gray-600">
-                  <li>Provide accurate and current information during signup.</li>
-                  <li>Keep your login credentials secure.</li>
-                  <li>Notify us immediately of unauthorized account use.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">2. User Content & Privacy</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">Your profile information (name, location, study preferences, avatar) and any messages sent through the app shall remain private. You retain rights to your content. We’re granted a limited license to:</p>
-            <ul class=" list-disc list-inside mb-6 text-gray-600">
-              <li>Store, back up, and transmit your data to facilitate matching, messaging, and Pomodoro features.</li>
-            </ul>
-            <p class="text-gray-600">You confirm your data doesn’t violate any law or infringe anyone’s rights, and you indemnify us for any breach</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">3. Data Usage</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">We collect and process the following to provide, secure, and improve the app:</p>
-            <ul class="list-disc list-inside mb-6 text-gray-600">
-              <li>Personal profile data</li>
-              <li>Messages between users</li>
-              <li>Usage analytics and performance metrics</li>
-            </ul>
-            <p class="text-gray-600">Refer to our <strong>Privacy Policy </strong> for details. By using BuddySync, you consent to our data practices.</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">4. Prohibited Conduct</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">You agree <strong>not</strong> to use BuddySync for:</p>
-            <ul class="list-disc list-inside mb-6 text-gray-600">
-              <li> Harassment, hate speech, or violence</li>
-              <li>Spam or phishing activities</li>
-              <li>Misrepresentation or impersonation</li>
-              <li>llegal, obscene, or harmful content</li>
-              <li>Circumventing or damaging platform security</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class=" font-bold mb-4 text-2xl font-charter">5. Intellectual Property</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">All BuddySync content, branding, and software are owned by *BuddySync Learning Network Inc.* Protected by global intellectual property laws. You may not copy, distribute, or modify any elements without written permission.</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter"> 6. Fees & Premium Features</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">Currently, BuddySync is free for all users. If we introduce paid features, we’ll provide pricing and subscription details in-app and in our Privacy Policy.</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">7. Account Termination</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">We reserve the right to suspend or terminate your account for violations, or at our discretion. You may also delete your account by contacting <a href="(mailto:support@buddysync.app)">[support@buddysync.app].</a></p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">8. Limitation of Liability</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">TO THE FULLEST EXTENT PERMITTED BY LAW, <strong>BuddySync, its staff, affiliates, or licensors shall not be liable for:</strong></p>
-            <ul class="list-disc list-inside mb-6 text-gray-600">
-              <li>Indirect, incidental, special, or punitive damages</li>
-              <li>Loss of data, revenue, goodwill, or user connections</li>
-              <li>Any user-generated content or interactions</li>
-              <li>App downtimes, bugs, or content interruptions</li>
-            </ul>
-            <p class="text-gray-600">Use is at your own risk. BuddySync is provided "AS IS" without warranties of any kind (fitness, reliability, etc.).</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">9. Disclaimers</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">BuddySync offers no guarantee of study success, academic outcomes, or partner quality. We disclaim all warranties to the fullest extent of applicable law.</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">10.  Governing Law</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">These Terms shall be governed by the laws of <strong>Canada</strong> (province TBD), without regard to conflict-of-law principles. Any dispute goes through local courts.</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">11.  Changes to Terms</h2>
-          <div class="border-l-2 border-gray-700 pl-6 mb-8">
-            <p class="text-gray-600">We may revise these Terms at any time. For material updates, we will notify you 30 days before they take effect. Continued use after that means you agree to the changes.</p>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-bold mb-4 text-2xl font-charter">12. Contact Information</h2> 
-            <p class="text-gray-600 mb-4">If you have questions or concerns, please contact us at:</p>
-            <div class="bg-[#d4d3d350] p-6 rounded-lg">
-              <p class="font-semibold mb-2">Company:</p>
-              <p class="mb-6 text-[#09090B]">BuddySync Learning Network Inc</p>
-              <p class="font-semibold mb-2">Email:</p>
-              <p class="mb-6"><a href="mailto:support@buddysync.app" class="text-[#09090B] underline underline-offset-4">support@buddysync.app</a></p>
-            </div>
-        </section>
-        <!-- footer -->
-        <footer class="pt-8 xl:pb-2 md:pb-4 text-center mt-auto">
-          <div class="flex flex-col items-center justify-center gap-8">
-            <!-- <div class="flex flex-row gap-3 sm:gap-6 w-full sm:w-auto justify-center items-center-mb-12 px-12">
-              <a href="/" target="_blank"><img src="/logo/applestore.svg" alt="App Store" width="200" height="40" decoding="async" data-nimg="1" class="w-full max-w-[200px]" style="color: transparent;"></a>
-              <a href="/" target="_blank"><img src="/logo/playsotre.svg" alt="Play Store" width="200" height="40" decoding="async" data-nimg="1" class="w-full max-w-[200px]" style="color: transparent;"></a>
-            </div> -->
-            <div class="flex justify-center items-center space-x-6 text-sm">
-              <a href="/policy.html" class="text-gray-500 hover: text-[#09090B] transition-colors duration-200">Privacy Policy</a>
-              <a href="/index.html" class="text-gray-500 hover: text-[#09090B] transition-colors duration-200">Terms of Service</a>
-            </div>
-          </div>
-        </footer>
-      </div> 
+    <div class="flex">
+      <div class="relative w-[280px] h-[520px] rotate-6 flex-shrink-0">
+        <img src="/logo/frame.png" alt="phone frame" class="absolute inset-0 pointer-events-none"/>
+        <img src="/logo/spin.jpg" alt="App Screenshot" class="absolute top-[25px] left-[88px] w-[106px] h-[229px] object-fill rounded-[0.7rem]" />
+        <div class="absolute top-[35px] left-1/2 -translate-x-1/2 z-10">
+          <div class="bg-black w-[60px] h-[13px] rounded-full shadow-md">
+            <div class="flex justify-between items-center px-1 py-[2px] w-full h-full">
+              <div class="w-[6px] h-[6px] bg-gray-800 rounded-full"></div>
+                <div class="w-[18px] h-[6px] bg-gray-800 rounded-md"></div>
+             </div>
+           </div>
+         </div>
+      </div>
+      <div class="relative w-[280px] h-[520px] -rotate-6 flex-shrink-0">
+        <img src="/logo/frame.png" alt="phone frame" class="absolute inset-0 pointer-events-none" />
+        <img src="/logo/homepage.jpg" alt="App Screenshot" class="absolute top-[24px] left-[88px] w-[106px] h-[230px] object-fill rounded-[0.7rem]" />
+        <div class="absolute top-[35px] left-1/2 -translate-x-1/2 z-10">
+          <div class="bg-black w-[60px] h-[13px] rounded-full shadow-md">
+            <div class="flex justify-between items-center px-1 py-[2px] w-full h-full">
+              <div class="w-[6px] h-[6px] bg-gray-800 rounded-full"></div>
+                <div class="w-[18px] h-[6px] bg-gray-800 rounded-md"></div>
+             </div>
+           </div>
+         </div>
+      </div>
     </div>
-  </main>
-  </body>
+  </div>
+</section>
+
+    <!-- Features -->
+<section class="py-20 bg-sky-50 px-4">
+  <h2 class="text-4xl font-bold text-center mb-16 leading-tight">
+    Features That Make a <span class="text-brandLightBlue">Difference</span>
+  </h2>
+
+  <div class="max-w-6xl mx-auto grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    
+    <!-- Feature card -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div class="bg-brandLightBlue/10 p-3 w-fit rounded-full mb-4">
+        <svg class="w-6 h-6 text-brandLightBlue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m0-4h.01M12 9v2m0 4v.01m0 0v.01M12 19a7 7 0 110-14 7 7 0 010 14z" />
+        </svg>
+      </div>
+      <h3 class="font-bold text-xl mb-2">Spin-to-Match Algorithm</h3>
+      <p class="text-gray-600">Quickly find a study buddy who shares your subjects and goals.</p>
+    </div>
+
+    <!-- Feature card -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div class="bg-brandLightBlue/10 p-3 w-fit rounded-full mb-4">
+        <svg class="w-6 h-6 text-brandLightBlue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h3 class="font-bold text-xl mb-2">Pomodoro Focus Timer</h3>
+      <p class="text-gray-600">Boost your productivity with proven time-management techniques.</p>
+    </div>
+
+    <!-- Feature card -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div class="bg-brandLightBlue/10 p-3 w-fit rounded-full mb-4">
+        <svg class="w-6 h-6 text-brandLightBlue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 16.5a2.5 2.5 0 01-2.5 2.5H5.5A2.5 2.5 0 013 16.5V7.5A2.5 2.5 0 015.5 5h13A2.5 2.5 0 0121 7.5v9z" />
+        </svg>
+      </div>
+      <h3 class="font-bold text-xl mb-2">Real-time Chat</h3>
+      <p class="text-gray-600">Instantly connect and collaborate on your terms.</p>
+    </div>
+
+    <!-- Feature card -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div class="bg-brandLightBlue/10 p-3 w-fit rounded-full mb-4">
+        <svg class="w-6 h-6 text-brandLightBlue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="font-bold text-xl mb-2">Custom Study Tags</h3>
+      <p class="text-gray-600">Match with learners who align with your expertise or needs.</p>
+    </div>
+
+    <!-- Feature card -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div class="bg-brandLightBlue/10 p-3 w-fit rounded-full mb-4">
+        <svg class="w-6 h-6 text-brandLightBlue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+      </div>
+      <h3 class="font-bold text-xl mb-2">Send Requests</h3>
+      <p class="text-gray-600">Start connections with one-way or two-way match requests.</p>
+    </div>
+
+    <!-- Feature card -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div class="bg-brandLightBlue/10 p-3 w-fit rounded-full mb-4">
+        <svg class="w-6 h-6 text-brandLightBlue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.586a1 1 0 01.707 1.707l-8 8a1 1 0 01-1.414 0l-8-8A1 1 0 013.414 10H8V3h8v7z" />
+        </svg>
+      </div>
+      <h3 class="font-bold text-xl mb-2">Chat and Study</h3>
+      <p class="text-gray-600">Begin live collaboration sessions right from the app.</p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="bg-white py-16 overflow-hidden">
+  <div class="max-w-7xl mx-auto text-center px-4" id="slider">
+    <h2 class="text-3xl font-bold mb-4">What Students Are Saying</h2>
+    <p class="text-gray-600 mb-10">Real feedback from learners just like you.</p>
+     <div class="flex justify-center items-center gap-2 mb-8">
+      <div class="flex gap-1 text-yellow-400 text-xl">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="text-gray-700 font-medium">4.9 out of 5 – 1,200+ ratings</p>
+    </div>
+    <!-- Scrolling Wrapper -->
+    <div class="relative overflow-hidden">
+      <div class="flex gap-6 w-max animate-marquee">
+        <!-- Testimonial Card -->
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user1.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Zainab M.</h4>
+              <p class="text-sm text-gray-500">Final Year Medical Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm ">
+            “The matching system is 🔥. I get paired with someone on the same wavelength every time.”
+          </p>
+        </div>
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user2.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Flourish A.</h4>
+              <p class="text-sm text-gray-500">A-Level Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            “The Pomodoro timer and tag system helped me focus for once.”
+          </p>
+        </div>
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user3.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Emeka D.</h4>
+              <p class="text-sm text-gray-500">CompSci</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            “I finally found a study buddy who understands my pace. Love it.”
+          </p>
+        </div>
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user4.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Franklin F.</h4>
+              <p class="text-sm text-gray-500">Nursing Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "I love how easy it is to find someone to study with. The app is so intuitive!"
+          </p>
+        </div>
+        
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user5.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Joshua M.</h4>
+              <p class="text-sm text-gray-500">Electrical Eng Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "App has literally saved my GPA"
+          </p>
+        </div>     
+
+<div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user1.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Zainab M.</h4>
+              <p class="text-sm text-gray-500">Final Year Medical Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm ">
+            “The matching system is 🔥. I get paired with someone on the same wavelength every time.”
+          </p>
+        </div>
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user2.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Flourish A.</h4>
+              <p class="text-sm text-gray-500">A-Level Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            “The Pomodoro timer and tag system helped me focus for once.”
+          </p>
+        </div>
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user3.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Emeka D.</h4>
+              <p class="text-sm text-gray-500">CompSci</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            “I finally found a study buddy who understands my pace. Love it.”
+          </p>
+        </div>
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user4.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Franklin F.</h4>
+              <p class="text-sm text-gray-500">Nursing Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "I love how easy it is to find someone to study with. The app is so intuitive!"
+          </p>
+        </div>
+        
+
+        <div class="bg-sky-50 min-w-[300px] max-w-[300px] p-6 rounded-xl shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/logo/user5.jpg" alt="User" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold text-brandLightBlue">Joshua M.</h4>
+              <p class="text-sm text-gray-500">Electrical Eng Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "App has literally saved my GPA"
+          </p>
+        </div>             
+      </div>
+    </div>
+  </div>
+</section>
+    
+  <!-- footer -->
+  <footer class="pt-8 xl:pb-2 md:pb-4 text-center mt-auto">
+    <div class="flex flex-col items-center justify-center gap-8">
+       <!-- <div class="flex flex-row gap-3 sm:gap-6 w-full sm:w-auto justify-center items-center-mb-12 px-12">
+      <a href="/" target="_blank"><img src="/logo/applestore.svg" alt="App Store" width="200" height="40" decoding="async" data-nimg="1" class="w-full max-w-[200px]" style="color: transparent;"></a>
+      <a href="/" target="_blank"><img src="/logo/playsotre.svg" alt="Play Store" width="200" height="40" decoding="async" data-nimg="1" class="w-full max-w-[200px]" style="color: transparent;"></a>
+      </div> -->
+       <div class="flex justify-center items-center space-x-6 text-sm">
+          <a href="/policy.html" class="text-gray-500 hover: text-[#09090B] transition-colors duration-200">Privacy Policy</a>
+          <a href="/terms.html" class="text-gray-500 hover: text-[#09090B] transition-colors duration-200">Terms of Service</a>
+          <a href="/accountdeletion.html" class="text-gray-500 hover: text-[#09090B] transition-colors duration-200">Account Deletion</a>
+         </div>
+        </div>
+        <div class="text-center text-xs text-gray-400 mt-8">
+          &copy; 2025 BuddySync. All rights reserved.
+        </div>
+
+    </footer>
+</body>
 </html>
